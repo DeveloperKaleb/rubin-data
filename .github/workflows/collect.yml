@@ -10,10 +10,6 @@ name: Collect
 on:
   schedule:
     - cron: '0 6 * * 1'
-    # TEMPORARY (added 2026-10-02): hourly, only to finish the first discovery backfill.
-    # Each hourly run skips itself, making no requests, once the digest says nothing is
-    # left to look up, and after 2026-10-09 whatever happens. Remove this line once done.
-    - cron: '23 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -29,47 +25,25 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      # The temporary hourly runs carry on only while discoveries are still being looked up.
-      - name: Read the latest digest
-        if: github.event.schedule == '23 * * * *'
-        uses: actions/checkout@v4
-        with:
-          path: gate
-          sparse-checkout: digest/latest.json
-          sparse-checkout-cone-mode: false
-
-      - name: Is there still backfill to do?
-        id: gate
-        run: |
-          if [ "${{ github.event.schedule }}" != '23 * * * *' ]; then echo "go=true" >> "$GITHUB_OUTPUT"
-          elif [[ "$(date -u +%F)" > 2026-10-09 ]]; then echo "Hourly backfill has expired; skipping."; echo "go=false" >> "$GITHUB_OUTPUT"
-          elif grep -q "still being looked up" gate/digest/latest.json; then echo "go=true" >> "$GITHUB_OUTPUT"
-          else echo "Discovery backfill is complete; skipping."; echo "go=false" >> "$GITHUB_OUTPUT"; fi
-
       - name: Check out rubin-data
-        if: steps.gate.outputs.go == 'true'
         uses: actions/checkout@v4
         with:
           path: data
 
       - name: Check out the site, for the collector's code
-        if: steps.gate.outputs.go == 'true'
         uses: actions/checkout@v4
         with:
           repository: DeveloperKaleb/PortfolioWebPage
           path: site
 
       - uses: actions/setup-node@v4
-        if: steps.gate.outputs.go == 'true'
         with:
           node-version: 24
 
       - name: Collect
-        if: steps.gate.outputs.go == 'true'
         run: node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON site/tools/rubin-collect.mjs --data data --live
 
       - name: Commit what changed
-        if: steps.gate.outputs.go == 'true'
         working-directory: data
         run: |
           git config user.name "rubin-collector"
