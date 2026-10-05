@@ -58,7 +58,7 @@
   {"designation":"533563","what":"new in digest","passes":false,"flags":["largeIfDark","highlyInclined"]},
   {"designation":"553137","what":"new in digest","passes":false,"flags":["largeIfDark","highlyInclined"]},
   {"designation":"2013 RV124","what":"new in digest","passes":false,"flags":["largeIfDark","highlyInclined"]},
-  {"designation":"2026 RY158","what":"new in digest","passes":false,"flags":["largeIfDark","retrograde","uncertainOrbit"]},
+  {"designation":"2026 RY158","what":"new in digest","passes":false,"flags":["largeIfDark","retrograde","uncertainOrbit","implausiblyBright"]},
   {"designation":"2021 LL37","what":"new in digest","passes":false,"flags":["largeIfDark"]},
   {"designation":"2020 MK53","what":"new in digest","passes":false,"flags":["largeIfDark","detached","uncertainOrbit"]},
   {"designation":"674118","what":"new in digest","passes":false,"flags":["largeIfDark"]},
