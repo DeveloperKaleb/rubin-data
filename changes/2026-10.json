@@ -1,6 +1,6 @@
 {
 "from": null,
-"to": "2026-10-05",
+"to": "2026-10-12",
 "entries": [
   {"designation":"120347","what":"new in digest","passes":true,"flags":[]},
   {"designation":"134340","what":"new in digest","passes":true,"flags":[]},
@@ -64,12 +64,12 @@
   {"designation":"674118","what":"new in digest","passes":false,"flags":["largeIfDark"]},
   {"designation":"2018 AG37","what":"new in digest","passes":false,"flags":["largeIfDark","uncertainOrbit"]},
   {"designation":"528381","what":"new in digest","passes":false,"flags":["largeIfDark"]},
-  {"designation":"2025 NE552","what":"new in digest","passes":false,"flags":["largeIfDark","uncertainOrbit"]},
   {"designation":"523671","what":"new in digest","passes":false,"flags":["largeIfDark"]},
   {"designation":"523639","what":"new in digest","passes":false,"flags":["largeIfDark"]},
   {"designation":"523759","what":"new in digest","passes":false,"flags":["largeIfDark"]},
   {"designation":"678191","what":"new in digest","passes":false,"flags":["largeIfDark"]},
   {"designation":"543354","what":"new in digest","passes":false,"flags":["largeIfDark"]},
+  {"designation":"2025 NE552","what":"new in digest","passes":false,"flags":["largeIfDark","uncertainOrbit"]},
   {"designation":"880665","what":"new in digest","passes":false,"flags":["largeIfDark"]},
   {"designation":"2026 GC24","what":"new in digest","passes":false,"flags":["largeIfDark","uncertainOrbit"]},
   {"designation":"482824","what":"new in digest","passes":false,"flags":["largeIfDark"]},
