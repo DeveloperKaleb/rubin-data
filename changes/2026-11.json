@@ -1,15 +1,15 @@
 {
 "from": "2026-10-26",
-"to": "2026-11-02",
+"to": "2026-11-09",
 "entries": [
   {"designation":"2026 ED138","what":"new in digest","passes":true,"flags":["disputed"]},
   {"designation":"2026 EE138","what":"new in digest","passes":true,"flags":["disputed"]},
   {"designation":"2026 HZ22","what":"new in digest","passes":false,"flags":["largeIfDark","uncertainOrbit"]},
-  {"designation":"2002 PJ149","what":"flags gained","flags":["jplDisagrees"]},
+  {"designation":"2014 OJ394","what":"H changed","from":5.44,"to":5.05,"hSource":"catalogue (JPL)"},
   {"designation":"2026 HA23","what":"new in digest","passes":false,"flags":["largeIfDark","uncertainOrbit"]},
   {"designation":"523724","what":"H changed","from":5.25,"to":5.65,"hSource":"Rubin: r with a typical TNO colour"},
-  {"designation":"2022 QF261","what":"H changed","from":5.13,"to":5.69,"hSource":"Rubin: r with a typical TNO colour"},
   {"designation":"2019 EP10","what":"new in digest","passes":false,"flags":["largeIfDark","uncertainOrbit"]},
-  {"designation":"2013 PX74","what":"left digest"}
+  {"designation":"2014 NB96","what":"new in digest","passes":false,"flags":["largeIfDark"]},
+  {"designation":"693861","what":"new in digest","passes":false,"flags":["largeIfDark"]}
 ]
 }
